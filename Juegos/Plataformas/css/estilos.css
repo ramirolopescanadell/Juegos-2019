@@ -1,0 +1,25 @@
+body{
+	text-align: center;
+}
+.contador{
+	position: absolute;
+	height: 50px;
+	width: 100px;
+	left: 45%;
+	font-size: 40px;
+	text-align: center;
+	color: red;
+}
+.boton{
+	position: absolute;
+	height: 180px;
+	width: 275px;
+	left: 41%;
+	top:35%;
+	cursor: pointer;
+	border: none;
+	display:none;
+	background-image: url("cartel2.png");
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
