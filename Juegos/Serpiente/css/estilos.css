@@ -1,0 +1,82 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.logo{
+	border-radius: 100%;
+}
+body{
+	background-image: url("imagenes/fondo1.png");
+	background-size:100% 120%;
+	background-repeat: no-repeat;
+}
+header{
+	margin-top: 10px;
+	height: 80px;
+	width: 400px;
+	background-color: black;
+	margin-left: 39%;
+	padding-left: 25px;
+	border :5px dashed #5cce42; 
+}
+.contador , .botonMutear{
+	background-color: black;
+	width: 188px;
+	height: 80px;
+	border :5px dashed #5cce42;
+	font-family: 'VT323', monospace;
+	font-size: 32px;
+	color: #ef5d00;
+	position: absolute;
+}
+.botonMutear{
+	left:22%;
+	cursor:pointer;
+}
+.botonMutear img{
+	width: 50%;
+	height: 50%;
+}
+.contador{
+	margin-top: -90px;
+	left: 72%;
+}
+.frutasComidas{
+	text-align: center;
+	margin-top: 8px;
+}
+.principal table{
+	width: 880px;
+	height: 450px;
+	margin-left: 22%;
+	margin-top: 10px;
+	border-collapse: collapse;
+	border: 5px dashed #5cce42;
+	background-color: black;
+}
+.principal td{
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+#emergente{
+    position:absolute;
+    width:850px;
+    height:400px;
+    margin-top:150px;
+    margin-left:35%;
+    display:none;
+}
+#emergente img{
+	height: 40%;
+	width: 60%;
+}
+#botonIniciar{
+	position:absolute;
+	top:44%;
+    left:47%;
+    border :5px dashed #5cce42; 
+    padding: 15px;
+}
