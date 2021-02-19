@@ -1,0 +1,22 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: black;
+}
+.principal table{
+	margin-left: 10%;
+	margin-top: 50px;
+	border-collapse: collapse;
+	background-color: white;
+}
+.principal td{
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 25px;
+}
