@@ -1,4 +1,4 @@
-var vivora = [421];
+var vibora = [421];
 var direccion = 37;
 var fruta; 
 var intervalo;
@@ -14,13 +14,14 @@ var menor1 = 39;
 var menor2 = 40;
 var lucesPrendidas = false;
 var frutasComidas = 0;
+
 //cosas del audio
 var audioPerdiste = new Audio("js/sonidos/perdiste.mp3");
 var audioComer = new Audio("js/sonidos/comer.ogg");
 var musica = new Audio("js/sonidos/cancion.mp3");
 var comerPoder = new Audio("js/sonidos/comerPoder.mp3");
 var cancionPoder = new Audio("js/sonidos/cancionPoder.wav");
-//var muteado = false;
+
 
 function iniciar(){
 	document.getElementById("botonIniciar").style.display="none";
@@ -88,7 +89,7 @@ function perdiste(){
 	document.getElementById(fruta).style.backgroundImage= null;
 	document.getElementById("emergente").style.display="block";
 	for (var i = 1 ; i <= cantCola; i++) {
-		document.getElementById(vivora[i]).style.backgroundColor = "black";
+		document.getElementById(vibora[i]).style.backgroundColor = "black";
 	}
 }
 
@@ -137,7 +138,7 @@ function activarPoder(){
 	setTimeout(desactivarPoder,15000,intervaloLuces);
 }
 function comer(){
-	if(vivora[0] == fruta){
+	if(vibora[0] == fruta){
 		frutasComidas++;
 		document.getElementById("contador").innerHTML = "X" + frutasComidas;
 		document.getElementById(fruta).style.backgroundImage= null;
@@ -150,59 +151,39 @@ function comer(){
 		}else{
 			if(aparecePoder == 0){
 				activarPoder();
-				document.getElementById(vivora[0]).style.backgroundSize = "80%";
+				document.getElementById(vibora[0]).style.backgroundSize = "80%";
 			}
 			document.getElementById(fruta).style.backgroundImage= "url('css/imagenes/fruta.jpg')";
 			audioComer.play();
 		}
 		cantCola++;
 	}
-	if(vivora.includes(vivora[0],1)){
+	if(vibora.includes(vibora[0],1)){
 		perder();
 	}
 }
 
 function mover(){
-	var aux = vivora[0];
+	var aux = vibora[0];
 	var aux2;
-	document.getElementById(vivora[0]).style.backgroundColor = colorFondo;
+	document.getElementById(vibora[0]).style.backgroundColor = colorFondo;
 	switch(direccion){
-			case 39 : vivora[0] = moverDerecha(vivora[0]); break;
-			case 37 : vivora[0] = moverIzquierda(vivora[0]); break;
-			case 38 : vivora[0] = moverArriba(vivora[0]); break;
-			case 40 : vivora[0] = moverAbajo(vivora[0]); break;
+			case 39 : vibora[0] = moverDerecha(vibora[0]); break;
+			case 37 : vibora[0] = moverIzquierda(vibora[0]); break;
+			case 38 : vibora[0] = moverArriba(vibora[0]); break;
+			case 40 : vibora[0] = moverAbajo(vibora[0]); break;
 	}
-	document.getElementById(vivora[0]).style.backgroundColor = colorActual;
+	document.getElementById(vibora[0]).style.backgroundColor = colorActual;
 	for (var i = 1 ; i <= cantCola; i++) {
-		aux2 = vivora[i];
-		vivora[i] = aux;
+		aux2 = vibora[i];
+		vibora[i] = aux;
 		aux = aux2;
-		document.getElementById(vivora[i]).style.backgroundColor = colorActual;
+		document.getElementById(vibora[i]).style.backgroundColor = colorActual;
 	}
 	document.getElementById(aux).style.backgroundColor = colorFondo;
 	comer();
 }
-/*function mutear(){
-	if(muteado){
-		muteado = false;
-		if(poderActivado){
-			
-		}else{
-			clearInterval(interMusica);
-			musica.pause();
-			musica.currentTime = 0;
-		}
-	}else{
-		muteado = true;
-		if(poderActivado){
-			
-		}else{
-			clearInterval(interMusica);
-			musica.pause();
-			musica.currentTime = 0;
-		}
-	}
-}*/
+
 document.addEventListener("keydown", function(e){
 	if((e.keyCode <= 40) && (e.keyCode >= 37)){
 		if((direccion == 37 ) && (e.keyCode == 39)){
